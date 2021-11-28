@@ -18,35 +18,37 @@
       <p>Bill</p>
       <input id="bill" type="number" value="1" oninput="calculate()">
     </section>
-    <section>
+    <article>
       <p>Select Tip %</p>
-      <button class="column" onclick="tipPercentInput(this.innerHTML)">5%</button>
-      <button class="column" onclick="tipPercentInput(this.innerHTML)">10%</button>
-      <button class="column" onclick="tipPercentInput(this.innerHTML)">15%</button>
-      <button class="column" onclick="tipPercentInput(this.innerHTML)">25%</button>
-      <button class="column" onclick="tipPercentInput(this.innerHTML)">50%</button>
-      <input class="column" id="custom" type="number" placeholder="Custom" oninput="tipPercentInput(this.value)"></input>
-    </section>
+      <div class="grid">
+        <button onclick="tipPercentInput(this.innerHTML)">5%</button>
+        <button onclick="tipPercentInput(this.innerHTML)">10%</button>
+        <button onclick="tipPercentInput(this.innerHTML)">15%</button>
+        <button onclick="tipPercentInput(this.innerHTML)">25%</button>
+        <button onclick="tipPercentInput(this.innerHTML)">50%</button>
+        <input id="custom" type="number" placeholder="Custom" oninput="tipPercentInput(this.value)"></input>
+      </div>
+    </article>
     <section>
       <p>Number of People</p>
       <input id="people" type="number" value="1" oninput="calculate()">
     </section>
     <section class="result">
-      <div>
-        <div class="column">
+      <div class="flex">
+        <div>
           <h2>Tip Amount</h2>
           <h3>/ person</h3>
         </div>
-        <div class="column">
+        <div>
           <h1 id="tip">$0.00</h1>
         </div>
       </div>
-      <div>
-        <div class="column">
+      <div div class="flex">
+        <div>
           <h2>Total</h2>
           <h3>/ person</h3>
         </div>
-        <div class="column">
+        <div>
           <h1 id="total">$0.00</h1>
         </div>
       </div>

@@ -8,6 +8,7 @@ let tipPercent = 1;
 
 function calculate() {
     if (billInput.value == "") { reset() }
+    if (peopleNo.value == "") { reset() }
     let tipTotalCalculated = billInput.value * tipPercent / parseInt(peopleNo.value);
     let totalCalculated = billInput.value / parseInt(peopleNo.value) + tipTotalCalculated;
     tipAmount.innerHTML = `\$${tipTotalCalculated.toFixed(2)}`;

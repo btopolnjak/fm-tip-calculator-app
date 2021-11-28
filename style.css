@@ -27,30 +27,44 @@ body {
     background-color: var(--light-grayish-cyan);
 }
 header {
-    padding: 3rem 0 2rem 0;
+    padding: 2.25rem 0 1.5rem 0;
     text-align: center;
-    height: 140px;
+    height: 120px;
 }
 main {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: calc(100vh - 140px);
+    max-width: 500px;
+    margin-inline: auto;
+    height: calc(100vh - 120px);
     border-radius: 20px 20px 0 0;
     background-color: var(--white);
     padding: 1.5rem;
+}
+
+.grid {
+    display: grid;
+    gap: 0.5rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
 }
 
 input[type=number] {
     text-align: right;
     font-family: 'Space Mono', sans-serif;
     font-weight: 700;
-    font-size: 18px;
+    font-size: 20px;
     padding: 0.75rem;
     border: none;
     border-radius: 5px;
     color: var(--very-dark-cyan);
-    background-color: var(--light-grayish-cyan);
+    background-color: var(--light-grayish-cyan-2);
 }
 
 input[type=number]:focus {
@@ -60,8 +74,8 @@ input[type=number]:focus {
 #bill {
     width: 100%;
     background-image: url(images/icon-dollar.svg);
-    background-size: 1rem;
-    background-position: 12px 12px;
+    background-size: 0.75rem;
+    background-position: 16px 16px;
     background-repeat: no-repeat;
 }
 #people {
@@ -83,7 +97,6 @@ footer {
     text-align: center;
 }
 footer a {
-    
     color: var(--strong-cyan);
 }
 
@@ -103,7 +116,7 @@ button {
     color: var(--white);
     font-family: 'Space Mono', sans-serif;
     font-weight: 700;
-    font-size: 18px;
+    font-size: 20px;
     cursor: pointer;
 }
 
@@ -149,6 +162,6 @@ p {
 
 
 /* Desktop Media Query */
-@media (min-width: 1400px) {
+@media (min-width: 1200px) {
 
 }
