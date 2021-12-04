@@ -7,17 +7,17 @@ const buttons = document.getElementsByTagName("button");
 let tipPercent = 1;
 
 function calculate() {
-    if (billInput.value == "") { reset() }
-    if (peopleNo.value == "") { reset() }
     let tipTotalCalculated = billInput.value * tipPercent / parseInt(peopleNo.value);
     let totalCalculated = billInput.value / parseInt(peopleNo.value) + tipTotalCalculated;
     tipAmount.innerHTML = `\$${tipTotalCalculated.toFixed(2)}`;
     totalAmount.innerHTML = `\$${totalCalculated.toFixed(2)}`;
+    if (peopleNo.value == "") {
+        tipAmount.innerHTML = "$0.00";
+        totalAmount.innerHTML = "$0.00";
+    }
 }
 
 function reset() {
-    billInput.value = "0";
-    peopleNo.value = "1";
     tipAmount.innerHTML = "$0.00";
     totalAmount.innerHTML = "$0.00";
     for (i=0; i<buttons.length; i++) {
